@@ -1,0 +1,120 @@
+html, body {
+  height: 100%;
+}
+body {
+  perspective: 300px;
+  perspective-origin: center center;
+  overflow: hidden;
+  font-size: 14px;
+  background: #000;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, .025) 50%, transparent 50%);
+  background-size: 2rem 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: -webkit-grab;
+}
+.side, .container { 
+  width: 10em;
+  height: 10em;
+}
+.container {
+  transform-style: preserve-3d;
+  transition: all 0.5s;
+  /* animation: rotate 10s infinite linear; */
+}
+
+.side {
+  position: absolute;
+  width: 10em;
+  height: 10em;
+  border: 0.15em solid white;
+  border-radius: 3em;
+  transform-style: preserve-3d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background: black;
+} 
+/* .side:before, .side:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  transform: translateZ(2em) rotateZ(45deg);
+}
+.side:before {
+  width: 5em;
+  height: 5em;
+  box-shadow: 0 0 10px 5px rgba(255, 255, 255, .5) inset;
+  border: 2px dotted rgba(255, 255, 255, .5);
+  border-radius: 20px;
+  box-sizing: border-box;
+  transform: translateZ(3em) rotateZ(45deg);
+}
+.side:after {
+  width: 10em;
+  height: 10em;
+  box-shadow: 0 0
+*/
+
+.back {
+  transform: translateZ(-5em) rotateY(180deg);
+}
+
+.left {
+  transform: translateX(-5em) rotateY(-90deg);
+}
+
+.right {
+  transform: translateX(5em) rotateY(90deg);
+}
+
+.top {
+  transform: translateY(-5em) rotateX(90deg);
+}
+
+.bottom {
+  transform: translateY(5em) rotateX(-90deg);
+}
+
+.front {
+  transform: translateZ(5em);;
+}
+@keyframes rotate {
+  100% {
+    transform: rotateX(360deg) rotateY(-360deg) rotateZ(360deg);
+  }
+}
+.number_0 {
+  height: 0;
+  width: 0;
+  animation: rotate 5s infinite linear;
+}
+.number_1 {
+  transform: rotateX(180deg) rotateY(0deg) rotateZ(180deg);
+} 
+.number_2 {
+  transform: rotateX(180deg) rotateY(90deg) rotateZ(180deg);
+} 
+.number_3 {
+  transform: rotateX(90deg) rotateY(270deg) rotateZ(90deg);
+}
+.number_4 {
+  transform: rotateX(90deg) rotateY(180deg) rotateZ(180deg);
+}
+.number_5 {
+  transform: rotateX(90deg) rotateY(0deg) rotateZ(0deg);
+}
+.number_6 {
+  transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+}
+
+.down {
+
+}

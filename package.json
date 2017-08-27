@@ -1,0 +1,12 @@
+{
+  	"name": "dice",
+  	"version": "1.0.0",
+  	"description": "First application",
+  	"main": "index.html",
+ 	"author": "Developer",
+  	"window": {
+   		"toolbar": false,
+    	"width": 600,
+   		"height": 600
+ 	}
+}

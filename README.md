@@ -1,2 +1,1 @@
-# sandbox
-experience
+this is six side dice, dev for test
